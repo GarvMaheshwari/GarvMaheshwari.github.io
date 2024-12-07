@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Skyline National Honors Society Volunteer App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Skyline National Honors Society Volunteer App</h1>
+					</header>
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#content"class="active">Overview</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<h2>Overview</h2>
+								<p>This application is a full-stack mobile app that was designed with the intended purpose of tracking volunteer hours for a student organization at my alma mater high school. Designed and implemented using Object Oriented Programming, Dart, Flutter framework, Firebase Firestore NoSQL database and Firebase Auth.</p>
+								<center><iframe width="560" height="315" src="https://www.youtube.com/embed/a96f5x7814k?si=d1f9ryqNuaPNnU9F&amp;start=134" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </center>
+								<h2>Situation</h2>
+								<p>My client, the advisor of the organization, was overwhelmed with keeping track of 100+ members student volunteer logs.
+									My client desired a mobile platform on which students could log their volunteer hours in the hopes of easing his burden of manually sifting through 100 student volunteer hour logs. 
+
+								</p>
+								<h2>Solution</h2>
+								<p>Over the course of 10 weeks I interviewed, iteratively designed, and presented a potential app solution to my client. To ensure I met my client’s needs and truly understood them, I conducted numerous interviews throughout the project lifecycle.
+									This app required me to make use of a NoSQL database, authentication service and work on both Android and IOS devices. At the time, I had not yet experienced using these tools or design philosophies, so I had to research and discover how I could best meet my clients needs.
+									After delivering the product to the client, he shared how excited he was to no longer have to sift through over a hundred students' logs.
+								</p>
+								<center>
+									<ul class="features"> 
+										<li>
+											<div class="zoom-container">
+												<span class="image">
+													<img src="images/NHS1.png" alt="Thumbnail Image" class="zoom-image" style="width: 85%; cursor: pointer; border: 1px solid #000;">
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="zoom-container">
+												<span class="image">
+													<img src="images/NHS2.png" alt="Thumbnail Image" class="zoom-image" style="width:85%; cursor: pointer; border: 1px solid #000;">
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="zoom-container">
+												<span class="image">
+													<img src="images/NHS3.png" alt="Thumbnail Image" class="zoom-image" style="width: 85%; cursor: pointer; border: 1px solid #000;">
+												</span>
+											</div>
+										</li>
+									</ul>
+									<div id="lightbox" style="display: none;">
+										<span id="close">&times;</span>
+										<img id="fullImage" src="" alt="Full Image">
+										<div id="zoom-controls">
+											<button id="zoomIn">+</button>
+											<button id="zoomOut">-</button>
+										</div>
+									</div>
+									
+									<!-- Inline JavaScript -->
+									<script>
+										// Get all the images that will trigger the lightbox
+										const images = document.querySelectorAll('.zoom-image');
+										const lightbox = document.getElementById('lightbox');
+										const fullImage = document.getElementById('fullImage');
+										const closeBtn = document.getElementById('close');
+										const zoomInBtn = document.getElementById('zoomIn');
+										const zoomOutBtn = document.getElementById('zoomOut');
+									
+										let zoomLevel = 1;
+									
+										// Open the lightbox when any image is clicked
+										images.forEach(image => {
+											image.onclick = function() {
+												nav.style.display = "none";
+												fullImage.src = image.src; // Set the large image in the lightbox
+												lightbox.style.display = "flex"; // Show the lightbox
+											};
+										});
+									
+										// Close the lightbox when the close button is clicked
+										closeBtn.onclick = function() {
+											nav.style.display = "block";
+											lightbox.style.display = "none"; // Hide the lightbox
+										};
+									
+										// Zoom in the image
+										zoomInBtn.onclick = function() {
+											zoomLevel += 0.1;
+											fullImage.style.transform = `scale(${zoomLevel})`;
+										};
+									
+										// Zoom out the image
+										zoomOutBtn.onclick = function() {
+											if (zoomLevel > 0.1) {
+												zoomLevel -= 0.1;
+												fullImage.style.transform = `scale(${zoomLevel})`;
+											}
+										};
+									</script>
+							</center>
+							</section>
+
+					</div>
+
+					<footer id="footer">
+						<p class="copyright"> 
+							<a href="https://www.linkedin.com/in/garv-maheshwari/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a>
+
+							<a href="https://github.com/GarvMaheshwari" class="icon brands fa-github alt"><span class="label">GitHub</span></a>
+
+
+						</a></p>
+					</footer>
+				<!-- Footer -->
+				 <!--
+					<footer id="footer">
+						<section>
+							<h2>Aliquam sed mauris</h2>
+							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<ul class="actions">
+								<li><a href="index.html" class="button">Back to Homepage</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Etiam feugiat</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd>
+								<dt>Email</dt>
+								<dd><a href="#">information@untitled.tld</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+				-->
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
